@@ -21,7 +21,7 @@ function ProductList({ addCartItem } : ProductListProp) {
                     {products.map(p => 
                         <tr key={ uuid() }>
                             <td>{ p.name }</td>
-                            <td>{ p.price }</td>
+                            <td>{ p.price.toFixed(2) }</td>
                             <td><button onClick={() => addCartItem(p.id)}>Add</button></td>
                         </tr>
                     )}

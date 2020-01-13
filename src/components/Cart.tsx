@@ -21,7 +21,7 @@ function CartList({ cartItemList, removeCartItem }: CartListProps) {
     cartItemList.forEach(c => {
         let product = products.find(p => p.id === c.productId);
         if (product) {
-            let obj = { name: product!.name, price: product!.price, total: +(product!.price*c.quantity).toFixed(2) };
+            let obj = { name: product!.name, price: product!.price, total: (product!.price*c.quantity) };
             cartView = [...cartView, { ...c, ...obj }];
             priceTotal += obj.total;
         }
@@ -43,10 +43,10 @@ function CartList({ cartItemList, removeCartItem }: CartListProps) {
                     {cartView.map(c => 
                         <tr key={uuid()}>
                             <td>{c.name}</td>
-                            <td>{c.price}</td>
+                            <td>{c.price.toFixed(2)}</td>
                             <td>{c.quantity}</td>
-                            <td>{c.total}</td>
-                            <td><button onClick={() => removeCartItem(c.productId)}>Remove Product</button></td>
+                            <td>{c.total.toFixed(2)}</td>
+                            <td><button onClick={() => removeCartItem(c.productId)}>Remove</button></td>
                         </tr>
                     )}
                 </tbody>
