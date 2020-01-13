@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import ProductList from './components/Product';
 
 const App = () => {
   return (
@@ -10,10 +11,8 @@ const App = () => {
           👋
         </span>
       </p>
-      <p>
-        Edit <code>src/App.tsx</code> and save to reload.
-      </p>
       <p>Products</p>
+      <ProductList />
       <p>Cart</p>
     </div>
   );
