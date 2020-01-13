@@ -2,7 +2,11 @@ import React from 'react';
 import { products } from '../constants/index';
 import { uuid } from 'uuidv4';
 
-function ProductList() {
+type ProductListProp = {
+    addCartItem: (id: number) => void;
+}
+
+function ProductList({ addCartItem } : ProductListProp) {
     return (
         <div>
             <table>
@@ -17,7 +21,7 @@ function ProductList() {
                         <tr key={ uuid() }>
                             <td>{ p.name }</td>
                             <td>{ p.price }</td>
-                            <td><button>Add</button></td>
+                            <td><button onClick={() => addCartItem(p.id)}>Add</button></td>
                         </tr>
                     )}
                 </tbody>
