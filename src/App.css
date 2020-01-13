@@ -20,3 +20,39 @@
 .App-link {
   color: #09d3ac;
 }
+
+.flex-box {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+table, tr, td {
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px 15px;
+}
+
+thead {
+  background-color: #EEE;
+}
+
+.priceTotal {
+  font-weight: 700;
+}
+
+button {
+  padding: 10px 15px;
+  width: 100px;
+  border: 1px solid #E86052;
+  color: #E86052;
+  background-color: #FFF;
+}
+
+button:hover {
+  border: 1px solid #FFF;
+  color: #FFF;
+  background-color: #E86052;
+}

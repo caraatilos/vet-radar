@@ -28,16 +28,24 @@ const App = () => {
 
   return (
     <div className="App">
-      <p>
-        Welcome to the Vet Radar front end test
-        <span aria-label="hand-wave" role="img">
-          👋
-        </span>
-      </p>
-      <p>Products</p>
-      <ProductList addCartItem={ addCartItemHandler } />
-      <p>Cart</p>
-      <CartList removeCartItem={removeCartItemHandler} cartItemList={cartItemList}/>
+      <div>
+        <p>
+          Welcome to the Vet Radar front end test
+          <span aria-label="hand-wave" role="img">
+            👋
+          </span>
+        </p>
+      </div>
+      <div className="flex-box">
+        <div>
+          <h2>Products</h2>
+          <ProductList addCartItem={ addCartItemHandler } />
+        </div>
+        <div>
+          <h2>Cart</h2>
+          <CartList removeCartItem={removeCartItemHandler} cartItemList={cartItemList}/>
+        </div>
+      </div>
     </div>
   );
 };

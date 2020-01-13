@@ -53,7 +53,7 @@ function CartList({ cartItemList, removeCartItem }: CartListProps) {
                 <tfoot>
                     <tr>
                         <td colSpan={3}></td>
-                        <td>{priceTotal.toFixed(2)}</td>
+                        <td className="priceTotal">{priceTotal.toFixed(2)}</td>
                         <td></td>
                     </tr>
                 </tfoot>
