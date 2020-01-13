@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import ProductList from './components/Product';
+import CartList from './components/Cart';
 import { CartItem } from './datatypes/types';
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
       <p>Products</p>
       <ProductList addCartItem={ addCartItemHandler } />
       <p>Cart</p>
+      <CartList removeCartItem={removeCartItemHandler} cartItemList={cartItemList}/>
     </div>
   );
 };

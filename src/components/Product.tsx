@@ -14,6 +14,7 @@ function ProductList({ addCartItem } : ProductListProp) {
                     <tr>
                         <th>Name</th>
                         <th>Price</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
